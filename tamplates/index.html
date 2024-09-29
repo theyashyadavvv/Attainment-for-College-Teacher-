@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PHCET College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+    
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    header img {
+      height: 80px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      display: inline-block;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #002244;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Image Slider */
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 400%; /* Adjust for 4 images */
+      height: 100%;
+      animation: slide 16s infinite; /* 16 seconds total for 4 images */
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Adjusted keyframes for slower transition */
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(0); } /* Keep the first image for 20% of the time */
+      25% { transform: translateX(-100%); } /* Move to the second image */
+      45% { transform: translateX(-100%); } /* Keep the second image for 20% */
+      50% { transform: translateX(-200%); } /* Move to the third image */
+      70% { transform: translateX(-200%); } /* Keep the third image for 20% */
+      75% { transform: translateX(-300%); } /* Move to the fourth image */
+      95% { transform: translateX(-300%); } /* Keep the fourth image for 20% */
+      100% { transform: translateX(0); } /* Go back to the first image */
+    }
+
+    .hero {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .about-section {
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      color: #003366;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-section h3 {
+      color: #003366;
+      margin-top: 20px;
+      font-size: 1.8rem;
+    }
+
+    .about-section p {
+      text-align: justify;
+      line-height: 1.6;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    footer {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <img src="images\college_logo.png" alt="PHCET Logo">
+    <h1>Pillai HOC College of Engineering and Technology (PHCET)</h1>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="information-technology.html">Information Technology</a>
+    <a href="#admission">Blooms Taxonomy</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>The Institute</h2>
+    <p><strong>PHCET > About > The Institute</strong></p>
+    <p>The Mahatma Education Society (MES) embarked upon its mission of “Education for All” with Chembur English School in the year 1970. The Mahatma Education Society is proof of a vision linked irrevocably to national goals. Born in a time when education was deemed service, it set about bringing social and economic change through the proactive personal development of every child that came into its fold.</p>
+    <h3>Pillai HOC College of Engineering and Technology, (PHCET) Rasayani</h3>
+    <p>The MES group, after establishing its name in the field of education for over 30 years, ventured into Engineering education by establishing PIIT in 1999 in Panvel. After successfully running PIIT for more than a decade, MES set up PHCET at Rasayani. PHCET offers both undergraduate (Bachelor of Engineering) and postgraduate (Master in Engineering) programs.</p>
+    <h3>Vision</h3>
+    <p>Pillai HOC College of Engineering and Technology will admit, educate, and train students for engineering graduation, fostering responsibility and professionalism in technical fields.</p>
+    <h3>Mission</h3>
+    <p>To develop professional engineers with a respect for the environment and to make them responsible citizens, with a global perspective, through quality education, practical training, and industry interaction.</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 PHCET. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+

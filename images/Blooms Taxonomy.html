@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PHCET College - Bloom's Taxonomy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    header img {
+      height: 80px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      display: inline-block;
+    }
+    nav {
+      text-align: center;
+      background-color: #002244;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    .about-section {
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+    .about-section h2 {
+      text-align: center;
+      color: #003366;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .about-section h3 {
+      color: #003366;
+      margin-top: 20px;
+      font-size: 1.8rem;
+    }
+    .about-section p {
+      text-align: justify;
+      line-height: 1.6;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #333;
+    }
+    .form-section {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+    }
+    .form-section h2 {
+      font-size: 1.8rem;
+      color: #003366;
+    }
+    .form-group {
+      margin: 20px 0;
+    }
+    input[type="file"] {
+      padding: 10px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #003366;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #002244;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #003366;
+      color: white;
+    }
+    td {
+      text-align: center;
+    }
+    footer {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <img src="images/college_logo.png" alt="PHCET Logo">
+    <h1>Pillai HOC College of Engineering and Technology (PHCET)</h1>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="information-technology.html">Information Technology</a>
+    <a href="#admission">Blooms Taxonomy</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>The Institute</h2>
+    <p><strong>PHCET > About > The Institute</strong></p>
+    <p>The Mahatma Education Society (MES) embarked upon its mission of “Education for All” with Chembur English School in the year 1970. ...</p>
+  </section>
+
+  <!-- Form Section for File Upload -->
+  <section class="form-section">
+    <h2>Upload Questions Excel File</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <input type="file" name="file" accept=".xlsx" required>
+      </div>
+      <button type="submit">Upload</button>
+    </form>
+
+    <!-- Display the table if mapped questions are available -->
+    {% if table %}
+      <h2>Mapped Questions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Bloom's Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ table|safe }}
+        </tbody>
+      </table>
+    {% endif %}
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 PHCET. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

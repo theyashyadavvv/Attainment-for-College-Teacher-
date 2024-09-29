@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PHCET - Information Technology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      display: inline-block;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #002244;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .section {
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #003366;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .section h3 {
+      color: #003366;
+      margin-top: 20px;
+      font-size: 1.8rem;
+    }
+
+    .section p, .section ul {
+      text-align: justify;
+      line-height: 1.6;
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /* Image Slider Styles */
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+      margin: 20px auto; /* Centering the slider */
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out; /* Smooth transition */
+    }
+
+    .slides img {
+      width: 100%;
+      height: 400px; /* Set a fixed height for images */
+      object-fit: cover;
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <img src="images/college_logo.png" alt="PHCET Logo">
+    <h1>Pillai HOC College of Engineering and Technology (PHCET)</h1>
+  </header>
+
+  <!-- Navigation Section -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About Us</a>
+    <a href="information-technology.html">Information Technology</a>
+    <a href="Blooms Taxonomy.html">Blooms Taxonomy</a>
+  </nav>
+
+  <!-- Information Technology Section -->
+  <section class="section">
+    <h2>Information Technology Department</h2>
+
+    <!-- Image Slider Section -->
+    <div class="slider">
+      <div class="slides">
+        <img src="images/WhatsApp Image 2024-09-27 at 12.06.52_690f1f33.jpg" alt="Image 1">
+        <img src="images/student.jpg" alt="Image 2">
+        <img src="images/IMG_0490[1].JPG" alt="Image 3">
+        <img src="images/background 1.jpg" alt="Image 4">
+      </div>
+      <button class="button prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="button next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <h3>Vision</h3>
+    <p>To impart knowledge and skills to produce competent IT professionals who are ready to meet industry standards and societal needs.</p>
+
+    <h3>Mission</h3>
+    <ul>
+      <li>To deliver quality education with a focus on innovation, professionalism, and research.</li>
+      <li>To foster collaboration and teamwork to solve real-world IT problems.</li>
+      <li>To equip students with industry-relevant skills and prepare them for a successful career in IT.</li>
+    </ul>
+
+    <h3>Program Educational Objectives (PEOs)</h3>
+    <ul>
+      <li>PEO 1: Graduates will be able to apply their technical skills in professional environments.</li>
+      <li>PEO 2: Graduates will be capable of solving complex problems through teamwork and leadership.</li>
+      <li>PEO 3: Graduates will continuously enhance their knowledge and skills through lifelong learning.</li>
+    </ul>
+
+    <h3>Program Outcomes (POs)</h3>
+    <ul>
+      <li>PO 1: Engineering knowledge.</li>
+      <li>PO 2: Problem analysis.</li>
+      <li>PO 3: Design and development of solutions.</li>
+      <li>PO 4: Conduct investigations of complex problems.</li>
+    </ul>
+
+    <h3>Program Specific Outcomes (PSOs)</h3>
+    <ul>
+      <li>PSO 1: Graduates will be able to apply modern tools for IT-related problem-solving.</li>
+      <li>PSO 2: Graduates will exhibit professional competence in software development and data management.</li>
+    </ul>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Pillai HOC College of Engineering and Technology. All rights reserved.</p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slides img');
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+
+      if (currentSlide < 0) {
+        currentSlide = slides.length - 1; // Loop to last slide
+      } else if (currentSlide >= slides.length) {
+        currentSlide = 0; // Loop back to first slide
+      }
+
+      const offset = -currentSlide * 100; // Calculate the offset percentage
+      document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+    }
+  </script>
+</body>
+</html>
